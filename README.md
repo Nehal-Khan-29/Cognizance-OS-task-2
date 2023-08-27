@@ -1,2 +1,2 @@
 # Cognizance-OS-task-2
-## bughunt solutions
+## Web scrap program
