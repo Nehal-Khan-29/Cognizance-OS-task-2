@@ -115,7 +115,7 @@ file.close
 
 # Find the length of a string
 message = "Hello, world!"
-length = len(message)                                                                         # length must be in int not in str
+length = len(message)                                                                        # length must be in int not in str
 
 # Convert a string to uppercase
 uppercase_message = message.upper()                                                          # upper() is the correct way to call the inbuilt function
@@ -123,7 +123,7 @@ print("Uppercase message:", uppercase_message)
 
 # Split a sentence into words
 sentence = "This is a sentence"
-words = sentence.split()                                                                    # there is not ',' in the sentence so cant split, thus dont give any parameter to split the words
+words = sentence.split()                                                                     # there is not ',' in the sentence so cant split, thus dont give any parameter to split the words
 print("Words:", words)
 
 # Define a function to calculate the power of a number
@@ -136,7 +136,7 @@ print("2^3:", power(2, 3))
 
 # Use a list as a stack
 stack = []
-stack.append(1)                                                                            # push is not a inbuilt function and also has not been declared earlier by user in this program, so use append
+stack.append(1)                                                                             # push is not a inbuilt function and also has not been declared earlier by user in this program, so use append
 stack.append(2)
 stack.append(3)
 print("Stack:", stack)
@@ -185,7 +185,7 @@ print("Result:", result)
 
 # Use a while loop to count from 1 to 5
 count = 1
-while count <= 5:                                                                       # ':' must be used for correct indentation 
+while count <= 5:                                                                        # ':' must be used for correct indentation 
     print(count)
     count += 1
 
@@ -198,7 +198,10 @@ print("Sum:", sum)
 
 # Access elements of a list using an invalid index
 my_list = [1, 2, 3, 4, 5]
-print(my_list[10])  
+try:
+    print(my_list[10])                                                                  # the index 10 is wrong , since the max is 4, thus use try-except to display th error 
+except IndexError as e:
+    print("An IndexError occurred:", e)
 
 # Define a function that takes a default argument
 def greet(name, greeting="Hello"):
@@ -212,7 +215,7 @@ b = 10
 a, b = b, a  
 
 # Use an invalid escape sequence in a string
-invalid_string = "This is an \q invalid escape sequence"
+invalid_string = 'This is an \\q invalid escape sequence'
 
 # Print the invalid string
 print(invalid_string)
